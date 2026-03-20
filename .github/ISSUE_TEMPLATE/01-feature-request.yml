@@ -1,0 +1,79 @@
+name: "💡 Feature Request"
+description: Suggest a new feature or improvement for the W'xOps IDP
+title: "[Feature]: "
+labels: ["enhancement", "feature-request", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to suggest a feature! 🚀  
+        Clear and detailed requests help us prioritise the roadmap effectively.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category
+      description: Which area of the platform does this relate to?
+      options:
+        - Identity & Access Management (SSO / RBAC)
+        - Service Catalog / Backstage
+        - CI/CD Pipeline
+        - Observability (Metrics / Logs / Traces)
+        - Developer Experience (Templates / Scaffolding)
+        - Security & Compliance (Policy as Code)
+        - Infrastructure / Kubernetes
+        - Documentation / TechDocs
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this solve? Use the format — "As a [role], I want [feature] so that [benefit]"
+      placeholder: |
+        As a Platform Engineer, I want automated service dependency visualization
+        so that teams can understand the blast radius during incidents.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see
+      placeholder: Add a live dependency graph in the Service Catalog that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative approaches or workarounds?
+      placeholder: We tried using X but it doesn't solve Y because...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Business Priority
+      options:
+        - "🔴 Critical — blocks my team's workflow"
+        - "🟠 High — significant productivity improvement"
+        - "🟡 Medium — nice to have"
+        - "🟢 Low — minor enhancement"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I'm willing to help implement this feature
+          required: false
+        - label: I can provide detailed requirements or design input
+          required: false
+        - label: I've searched existing issues and this is not a duplicate
+          required: true

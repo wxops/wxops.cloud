@@ -1,0 +1,96 @@
+name: "💬 General Feedback / IDP Experience"
+description: Share your experience, thoughts, or ideas about W'xOps IDP
+title: "[Feedback]: "
+labels: ["feedback", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We love hearing from the community! 💙  
+        Every piece of feedback — positive or critical — helps us build a better platform.
+
+  - type: dropdown
+    id: feedback_type
+    attributes:
+      label: Feedback Type
+      options:
+        - "✅ Positive experience — something that works really well"
+        - "🔧 Pain point — something that could be improved"
+        - "💡 Idea — a general idea that doesn't fit Feature Request"
+        - "📖 Documentation — unclear or missing docs"
+        - "🎓 Onboarding — experience as a new user"
+        - "🔁 Developer Loop — inner/outer loop experience"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your Role
+      options:
+        - Developer / Software Engineer
+        - Platform Engineer
+        - DevOps / SRE
+        - Engineering Manager
+        - CTO / VP Engineering
+        - Security Engineer
+        - Architect
+        - Student / Learner
+        - Other
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Tell us about your situation — what were you trying to do?
+      placeholder: I was trying to onboard a new microservice to the platform and noticed that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Your Feedback
+      description: Share your thoughts, experience, or ideas
+      placeholder: |
+        The Golden Path template workflow is fantastic! However, when I tried to...
+        
+        What I'd love to see is...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact on your team
+      options:
+        - "🚀 High — significantly affects our daily workflow"
+        - "📈 Medium — noticeable but manageable"
+        - "📝 Low — minor inconvenience"
+
+  - type: dropdown
+    id: recommendation
+    attributes:
+      label: Would you recommend W'xOps IDP?
+      options:
+        - "⭐⭐⭐⭐⭐ Absolutely, already recommending it"
+        - "⭐⭐⭐⭐ Yes, with some reservations"
+        - "⭐⭐⭐ Maybe, needs improvement first"
+        - "⭐⭐ Not yet, significant gaps"
+        - "⭐ No, doesn't meet our needs"
+
+  - type: textarea
+    id: anything_else
+    attributes:
+      label: Anything else?
+      description: Any other context, links, or information you'd like to share
+
+  - type: checkboxes
+    id: contact
+    attributes:
+      label: Follow-up
+      options:
+        - label: I'm happy to be contacted for a follow-up conversation or free demo
+          required: false
+        - label: I'd like to join the early access / beta programme
+          required: false

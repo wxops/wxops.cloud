@@ -1,0 +1,46 @@
+import type { Metadata } from 'next'
+import './globals.css'
+
+export const metadata: Metadata = {
+  title: 'W\'xOps IDP — Internal Developer Portal',
+  description:
+    'A Platform Engineering showcase: The Golden Path to modern cloud-native development. One identity, one catalog, zero friction.',
+  keywords: [
+    'Internal Developer Portal',
+    'Platform Engineering',
+    'Golden Path',
+    'DevOps',
+    'Kubernetes',
+    'IDP',
+    'Developer Experience',
+  ],
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon-128x128.png', sizes: '128x128', type: 'image/png' },
+    ],
+  },
+  openGraph: {
+    title: "W'xOps IDP — Internal Developer Portal",
+    description:
+      'Platform Engineering done right. Onboard in minutes, deploy with confidence, scale without friction.',
+    type: 'website',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-[#050308] text-slate-100 antialiased">{children}</body>
+    </html>
+  )
+}
