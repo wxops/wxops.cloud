@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'W\'xOps IDP — Internal Developer Portal',
   description:
     'A Platform Engineering showcase: The Golden Path to modern cloud-native development. One identity, one catalog, zero friction.',
@@ -30,6 +33,23 @@ export const metadata: Metadata = {
     description:
       'Platform Engineering done right. Onboard in minutes, deploy with confidence, scale without friction.',
     type: 'website',
+    url: siteUrl,
+    siteName: "W'xOps IDP",
+    images: [
+      {
+        url: '/thumbnail.png',
+        width: 1200,
+        height: 630,
+        alt: "W'xOps IDP — Internal Developer Portal",
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "W'xOps IDP — Internal Developer Portal",
+    description:
+      'Platform Engineering done right. Onboard in minutes, deploy with confidence, scale without friction.',
+    images: ['/thumbnail.png'],
   },
 }
 
