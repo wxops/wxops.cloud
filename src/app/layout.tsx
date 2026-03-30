@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
@@ -60,6 +61,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <Script strategy="afterInteractive" src="https://analytics.xeusnguyen.xyz/script.js" data-website-id="6c2142a0-ff3f-4c50-82d3-9936b776de74" />
+      </head>
       <body className="bg-[#050308] text-slate-100 antialiased">{children}</body>
     </html>
   )
